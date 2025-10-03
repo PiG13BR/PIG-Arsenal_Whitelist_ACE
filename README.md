@@ -26,4 +26,5 @@ _pistols = [
 
 PIG_arsenalWeapons = (_rifles_basic + _pistols);
 ```
-
+- There is an [exporter](https://github.com/PiG13BR/PIG-Arsenal_Whitelist_ACE/blob/main/Missionframework/Arsenal_Whitelist/export_arsenal.sqf) to get all items classes from playable entities. You can run this from the debug console, in editor. The data will be passed into your [rpt files](https://community.bistudio.com/wiki/Crash_Files).
+- To access the Arsenal, open the self interaction ace menu and go to Equipaments. As **default**, this action will be always available, to change that, you need to change the conditions in the [initPlayerLocal.sqf](https://github.com/PiG13BR/PIG-Arsenal_Whitelist_ACE/blob/main/Missionframework/initPlayerLocal.sqf) file.
