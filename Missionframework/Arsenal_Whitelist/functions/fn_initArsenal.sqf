@@ -10,13 +10,15 @@
         Modifications by PiG13BR
 
     Parameter(s):
-        NONE
+        _classRole - player's entity classname [STRING, defaults to ""]
 
     Returns:
         Function reached the end [BOOL]
 */
 
 params[["_classRole", "", [""]]];
+
+if (_classRole isEqualTo "") exitWith {["[ARSENAL WHITELIST] No class defined"] call BIS_fnc_error; false};
 
 PIG_arsenalWeapons = [];
 PIG_arsenalMagazines = [];
@@ -25,8 +27,6 @@ PIG_arsenalBackpacks = [];
 PIG_arsenalBlacklist = [];
 PIG_arsenalAllowed = [];
 PIG_arsenalAllowedExtension = [];
-
-if (_classRole isEqualTo "") exitWith {["[ARSENAL WHITELIST] No defined class"] call BIS_fnc_error; false};
 
 [_classRole] call compile preprocessFileLineNumbers "Arsenal_Whitelist\presets\roles_arsenal_config.sqf";
 
